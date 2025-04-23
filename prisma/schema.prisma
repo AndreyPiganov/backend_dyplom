@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String         @id
+  email     String         @unique
+  username  String
+  password  String
+  role      Role           @default(STUDENT)
+  tests     TestSession[]
+  createdAt DateTime       @default(now())
+
+  BilletResult BilletResult[]
+}
+
+enum Role {
+  STUDENT
+  ADMIN
+}
+
+model Question {
+  id           Int          @id @default(autoincrement())
+  questionText String
+  questionType QuestionType
+  answers      Answer[]
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  TestAnswer   TestAnswer[]
+  billets      Billet[]     @relation("BilletQuestions")
+}
+
+enum QuestionType {
+  TEXT
+  MULTIPLE_CHOICE
+  TRUE_FALSE
+}
+
+model Answer {
+  id         Int      @id @default(autoincrement())
+  questionId Int
+  text       String
+  isCorrect  Boolean
+
+  question   Question  @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  TestAnswer TestAnswer[]
+}
+
+model TestSession {
+  id          Int           @id @default(autoincrement())
+  userId      String
+  startedAt   DateTime      @default(now())
+  completedAt DateTime?
+  score       Int?
+
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  testAnswers TestAnswer[]
+}
+
+model TestAnswer {
+  testSessionId  Int
+  questionId     Int
+  answerId       Int?
+  userTextAnswer String?
+  isCorrect      Boolean
+
+  testSession    TestSession @relation(fields: [testSessionId], references: [id], onDelete: Cascade)
+  question       Question    @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  answer         Answer?     @relation(fields: [answerId], references: [id], onDelete: SetNull)
+
+  @@unique([testSessionId, questionId])
+}
+
+model Billet {
+  id           Int        @id @default(autoincrement())
+  title        String
+  questions    Question[] @relation("BilletQuestions")
+
+  BilletResult BilletResult[]
+}
+
+model BilletResult {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  billetId  Int
+  score     Int
+  passedAt  DateTime
+
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  billet    Billet  @relation(fields: [billetId], references: [id], onDelete: Cascade)
+}
+

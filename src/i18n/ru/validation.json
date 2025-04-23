@@ -1,0 +1,43 @@
+{
+    "isNotEmpty": "Поле {property} не может быть пустым.",
+    "isEmail": "Поле {property} имеет неверный формат. Проверьте (например, example@mail.com).",
+    "minLength": "Поле {property} должно содержать минимум {constraints.0} символов.",
+    "maxLength": "Поле {property} не должно превышать {constraints.0} символов.",
+    "isString": "Поле {property} должно быть строкой.",
+    "isInt": "Поле {property} должно быть целым числом.",
+    "isArray": "Поле {property} должно быть массивом.",
+    "isOptional": "Поле {property} является необязательным.",
+    "isBoolean": "Поле {property} должно быть булевым значением (true или false).",
+    "isEnum": "Недопустимое значение {value} для поля {property}",
+    "isISO31661Alpha2": "Поле {property} должно содержать корректный ISO 3166-1 alpha-2 код страны.",
+    "isJSON": "Поле {property} должно содержать корректный JSON.",
+    "arrayMinSize": "Поле {property} должно содержать минимум {constraint1} элемент(а/ов)",
+    "question": {
+        "alredyCreated": "Вопрос с данным текстом {value} уже создан",
+        "notFound": "Вопроса с данным id {value} не найдено"
+    },
+    "customEmail": {
+        "empty": "Поле {property} не должно быть пустым",
+        "invalidStart": "Поле {property} должно начинаться с двух латинских букв",
+        "missingAt": "Поле {property} должен содержать символ @",
+        "invalidFormat": "Поле {property} некорректно. Проверьте формат (например, example@mail.com)",
+        "localPartTooLong": "Поле {property} некорректно. Локальная часть не может превышать 32 символа"
+    },
+    "customPassword": {
+        "noUpperCase": "Поле {property} должно содержать хотя бы одну заглавную букву",
+        "noNumber": "Поле {property} должно содержать хотя бы одну цифру",
+        "noSpecialChar": "Поле {property} должно содержать хотя бы один спецсимвол (!@#$%^&*)",
+        "tooShort": "Поле {property} должно иметь не менее 8 символов",
+        "invalid": "Поле {property} не соответствует требованиям безопасности",
+        "noLatin": "Поле {property} может содержать только латинские буквы, цифры и специальные символы."
+    },
+    "user": {
+        "notFound": "Пользователя с данным {name} не найдено {value}",
+        "notFoundConfidence": "Неправильные данные пользователя",
+        "forgotPassword": "Неправильный email или code",
+        "alredyExist": "Пользователь уже зарегистрирован"
+    },
+    "test": {
+        "notFound": "Сессии с даннным {name} не найдено {value}"
+    }
+}

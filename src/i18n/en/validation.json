@@ -1,0 +1,43 @@
+{
+    "isNotEmpty": "The field {property} must not be empty.",
+    "isEmail": "The field {property} has an invalid format. Please check (e.g., example@mail.com).",
+    "minLength": "The field {property} must contain at least {value} characters.",
+    "maxLength": "The field {property} must not exceed {value} characters.",
+    "isString": "The field {property} must be a string.",
+    "isInt": "The field {property} must be an integer.",
+    "isArray": "The field {property} must be an array.",
+    "isOptional": "The field {property} is optional.",
+    "isBoolean": "The field {property} must be a boolean value (true or false).",
+    "isEnum": "Invalid value {value} for field {property}.",
+    "isISO31661Alpha2": "The field {property} must contain a valid ISO 3166-1 alpha-2 country code.",
+    "isJSON": "The field {property} must contain valid JSON.",
+    "arrayMinSize": "The field {property} must contain at least {constraint1} item(s).",
+    "question": {
+        "alredyCreated": "A question with the text {value} has already been created.",
+        "notFound": "A question with id {value} not found"
+    },
+    "customEmail": {
+        "empty": "The field {property} cannot be empty",
+        "invalidStart": "The field {property} must start with two Latin letters",
+        "missingAt": "The field {property} must contain the @ symbol",
+        "invalidFormat": "Invalid field {property} format. Please check (e.g., example@mail.com)",
+        "localPartTooLong": "The {property} field is incorrect. The local part cannot exceed 32 characters"
+    },
+    "customPassword": {
+        "noUpperCase": "The field {property} must contain at least one uppercase letter",
+        "noNumber": "The field {property} must contain at least one number",
+        "noSpecialChar": "The field {property} must contain at least one special character (!@#$%^&*)",
+        "tooShort": "The field {property} must be at least 8 characters long",
+        "invalid": "The {property} field does not meet security requirements",
+        "noLatin": "The {property} field can only contain Latin letters, numbers and special characters."
+    },
+    "user": {
+        "notFound": "No user with this {name} was found {id}",
+        "notFoundConfidence": "Invalid user credentials",
+        "forgotPassword": "Invalid email or code",
+        "alreadyExist": "User already exists"
+    },
+    "test": {
+        "notFound": "No session with this {name} was found {value}"
+    }
+}
