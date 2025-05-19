@@ -26,7 +26,7 @@ export class QuestionController {
     }
 
     @Get()
-    @Roles(Role.ADMIN)
+    @Roles(Role.ADMIN, Role.STUDENT)
     @ApiOperation({ summary: 'Получить список всех вопросов' })
     @ApiResponse({ status: 200, description: 'Список вопросов получен' })
     getAllQuestions() {

@@ -44,7 +44,7 @@ export class UserController {
 
     @UseGuards(JwtAuthGuard, RolesGuard)
     @Get('/me')
-    @Roles(Role.ADMIN)
+    @Roles(Role.ADMIN, Role.STUDENT)
     @ApiBearerAuth('access-token')
     @ApiOperation({ summary: 'Получить данные текущего пользователя' })
     @ApiResponse({ status: 200, description: 'Профиль пользователя' })
