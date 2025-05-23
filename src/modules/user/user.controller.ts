@@ -71,8 +71,8 @@ export class UserController {
     @ApiParam({ name: 'id', type: String, description: 'UUID пользователя' })
     @ApiBody({ type: UpdateUserDto })
     @ApiResponse({ status: 200, description: 'Пользователь обновлён' })
-    updateUserById(@Param('id') id: string, @Body() dto: UpdateUserDto, @CurrentUser() user: User) {
-        return this.userService.updateUserById(id, dto, user);
+    updateUserById(@Param('id') id: string, @Body() dto: UpdateUserDto) {
+        return this.userService.updateUserById(id, dto);
     }
 
     @UseGuards(JwtAuthGuard, RolesGuard)
@@ -82,7 +82,7 @@ export class UserController {
     @ApiOperation({ summary: 'Удалить пользователя по ID' })
     @ApiParam({ name: 'id', type: String, description: 'UUID пользователя' })
     @ApiResponse({ status: 200, description: 'Пользователь удалён' })
-    deleteUserById(@Param('id') id: string, @CurrentUser() user: User) {
-        return this.userService.deleteUserById(id, user);
+    deleteUserById(@Param('id') id: string) {
+        return this.userService.deleteUserById(id);
     }
 }
