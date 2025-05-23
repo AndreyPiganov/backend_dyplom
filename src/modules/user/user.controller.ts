@@ -65,24 +65,24 @@ export class UserController {
 
     @UseGuards(JwtAuthGuard, RolesGuard)
     @Patch(':id')
-    @Roles(Role.ADMIN)
+    @Roles(Role.ADMIN, Role.STUDENT)
     @ApiBearerAuth('access-token')
     @ApiOperation({ summary: 'Обновить пользователя по ID' })
     @ApiParam({ name: 'id', type: String, description: 'UUID пользователя' })
     @ApiBody({ type: UpdateUserDto })
     @ApiResponse({ status: 200, description: 'Пользователь обновлён' })
-    updateUserById(@Param('id') id: string, @Body() dto: UpdateUserDto) {
-        return this.userService.updateUserById(id, dto);
+    updateUserById(@Param('id') id: string, @Body() dto: UpdateUserDto, @CurrentUser() user: User) {
+        return this.userService.updateUserById(id, dto, user);
     }
 
     @UseGuards(JwtAuthGuard, RolesGuard)
     @Delete(':id')
-    @Roles(Role.ADMIN)
+    @Roles(Role.ADMIN, Role.STUDENT)
     @ApiBearerAuth('access-token')
     @ApiOperation({ summary: 'Удалить пользователя по ID' })
     @ApiParam({ name: 'id', type: String, description: 'UUID пользователя' })
     @ApiResponse({ status: 200, description: 'Пользователь удалён' })
-    deleteUserById(@Param('id') id: string) {
-        return this.userService.deleteUserById(id);
+    deleteUserById(@Param('id') id: string, @CurrentUser() user: User) {
+        return this.userService.deleteUserById(id, user);
     }
 }
