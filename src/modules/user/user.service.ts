@@ -1,11 +1,4 @@
-import {
-    ForbiddenException,
-    Inject,
-    Injectable,
-    LoggerService,
-    NotFoundException,
-    UnauthorizedException
-} from '@nestjs/common';
+import { Inject, Injectable, LoggerService, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { WINSTON_MODULE_NEST_PROVIDER } from 'nest-winston';
 import { DatabaseService } from '../database/database.service';
 import { I18nContext, I18nService } from 'nestjs-i18n';
@@ -102,13 +95,13 @@ export class UserService {
         }
     }
 
-    async updateUserById(id: string, dto: UpdateUserDto, user: User): Promise<User> {
+    async updateUserById(id: string, dto: UpdateUserDto): Promise<User> {
         try {
             const userById = await this.getUserById(id);
 
-            if (userById.id !== user.id) {
-                throw new ForbiddenException('Нельзя обновить чужой аккаунт');
-            }
+            // if (userById.id !== user.id) {
+            //     throw new ForbiddenException('Нельзя обновить чужой аккаунт');
+            // }
 
             return this.prisma.user.update({
                 where: { id: userById.id },
@@ -120,16 +113,16 @@ export class UserService {
         }
     }
 
-    async deleteUserById(id: string, user: User): Promise<User> {
+    async deleteUserById(id: string): Promise<User> {
         try {
             const userById = await this.getUserById(id);
 
-            if (userById.id !== user.id) {
-                throw new ForbiddenException('Нельзя обновить чужой аккаунт');
-            }
+            // if (userById.id !== user.id) {
+            //     throw new ForbiddenException('Нельзя обновить чужой аккаунт');
+            // }
 
             return this.prisma.user.delete({
-                where: { id: user.id }
+                where: { id: userById.id }
             });
         } catch (error) {
             this.logger.error(`Error delete user by id ${id}`);
