@@ -10,6 +10,7 @@ import { RolesGuard } from '../../guards/roles.guard';
 import { CurrentUser } from '../../common/decorators/current.user.decorator';
 import { ApiTags, ApiBearerAuth, ApiOperation, ApiResponse, ApiParam, ApiBody } from '@nestjs/swagger';
 import UserTokenResponse from './types/response/user.response';
+import { IdMatchGuard } from 'src/guards/id.match.guard';
 
 @ApiTags('Users')
 @Controller('users')
@@ -63,7 +64,7 @@ export class UserController {
         return this.userService.getUserById(id);
     }
 
-    @UseGuards(JwtAuthGuard, RolesGuard)
+    @UseGuards(JwtAuthGuard, RolesGuard, IdMatchGuard)
     @Patch(':id')
     @Roles(Role.ADMIN, Role.STUDENT)
     @ApiBearerAuth('access-token')
@@ -75,7 +76,7 @@ export class UserController {
         return this.userService.updateUserById(id, dto);
     }
 
-    @UseGuards(JwtAuthGuard, RolesGuard)
+    @UseGuards(JwtAuthGuard, RolesGuard, IdMatchGuard)
     @Delete(':id')
     @Roles(Role.ADMIN, Role.STUDENT)
     @ApiBearerAuth('access-token')
