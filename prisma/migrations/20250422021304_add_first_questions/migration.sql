@@ -708,196 +708,197 @@ INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (79, 'Что является формой проявления культуры?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(79, 'Экономика', FALSE),
-(79, 'Наука', TRUE),
 (79, 'Рынок', FALSE),
+(79, 'Наука', TRUE),
+(79, 'Экономика', FALSE),
 (79, 'Земельный участок', FALSE);
 
 -- Вопрос 80
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (80, 'Кто из субъектов РФ может издавать законы в пределах своей компетенции?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(80, 'Федеральное собрание РФ', FALSE),
-(80, 'Законодательные собрания субъектов РФ', TRUE),
 (80, 'Президент РФ', FALSE),
-(80, 'Совет Федерации', FALSE);
+(80, 'Законодательные собрания субъектов РФ', TRUE),
+(80, 'Совет Федерации', FALSE),
+(80, 'Федеральное собрание РФ', FALSE);
 
 -- Вопрос 81
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (81, 'Что является основой морали?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(81, 'Политическая пропаганда', FALSE),
-(81, 'Представления о добре и зле', TRUE),
 (81, 'Финансовые интересы', FALSE),
-(81, 'Рекламные кампании', FALSE);
+(81, 'Рекламные кампании', FALSE),
+(81, 'Представления о добре и зле', TRUE),
+(81, 'Политическая пропаганда', FALSE);
 
 -- Вопрос 82
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (82, 'Что из перечисленного относится к источникам права?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(82, 'Личное мнение', FALSE),
 (82, 'Нормативный правовой акт', TRUE),
+(82, 'Письмо другу', FALSE),
 (82, 'Письменное заявление', FALSE),
-(82, 'Письмо другу', FALSE);
+(82, 'Личное мнение', FALSE);
 
 -- Вопрос 83
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (83, 'Какая отрасль права регулирует имущественные отношения?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(83, 'Административное право', FALSE),
 (83, 'Гражданское право', TRUE),
+(83, 'Трудовое право', FALSE),
 (83, 'Уголовное право', FALSE),
-(83, 'Трудовое право', FALSE);
+(83, 'Административное право', FALSE);
 
 -- Вопрос 84
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (84, 'Какой элемент включает политическая система общества?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(84, 'Семья', FALSE),
+(84, 'Рынок', FALSE),
 (84, 'Государство', TRUE),
-(84, 'Трудовой коллектив', FALSE),
-(84, 'Рынок', FALSE);
+(84, 'Семья', FALSE),
+(84, 'Трудовой коллектив', FALSE);
 
 -- Вопрос 85
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (85, 'Что характеризует гражданское общество?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
 (85, 'Влияние на курс валют', FALSE),
+(85, 'Зависимость от чиновников', FALSE),
 (85, 'Самостоятельность от государства', TRUE),
-(85, 'Военная структура', FALSE),
-(85, 'Зависимость от чиновников', FALSE);
+(85, 'Военная структура', FALSE);
 
 -- Вопрос 86
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (86, 'Что регулирует трудовое право?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
+(86, 'Образование', FALSE),
 (86, 'Правонарушения', FALSE),
 (86, 'Отношения между работником и работодателем', TRUE),
-(86, 'Семейные отношения', FALSE),
-(86, 'Образование', FALSE);
+(86, 'Семейные отношения', FALSE);
 
 -- Вопрос 87
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (87, 'Какой орган РФ имеет право издавать указы?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
+(87, 'Совет Федерации', FALSE),
 (87, 'Государственная Дума', FALSE),
 (87, 'Президент РФ', TRUE),
-(87, 'Совет Федерации', FALSE),
 (87, 'Конституционный Суд', FALSE);
 
 -- Вопрос 88
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (88, 'Что входит в состав доходов гражданина?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(88, 'Государственные расходы', FALSE),
-(88, 'Заработная плата', TRUE),
+(88, 'Социальные нормы', FALSE),
 (88, 'Бюджет страны', FALSE),
-(88, 'Социальные нормы', FALSE);
+(88, 'Заработная плата', TRUE),
+(88, 'Государственные расходы', FALSE);
 
 -- Вопрос 89
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (89, 'Что может являться объектом собственности?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(89, 'Знание', FALSE),
 (89, 'Недвижимость', TRUE),
-(89, 'Погода', FALSE),
-(89, 'Свобода слова', FALSE);
+(89, 'Свобода слова', FALSE),
+(89, 'Знание', FALSE),
+(89, 'Погода', FALSE);
 
 -- Вопрос 90
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (90, 'Что относится к обязанностям гражданина РФ?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(90, 'Выбирать профессию', FALSE),
-(90, 'Соблюдать Конституцию РФ', TRUE),
 (90, 'Создавать бизнес', FALSE),
-(90, 'Посещать культурные мероприятия', FALSE);
+(90, 'Соблюдать Конституцию РФ', TRUE),
+(90, 'Посещать культурные мероприятия', FALSE),
+(90, 'Выбирать профессию', FALSE);
 
 -- Вопрос 91
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (91, 'Что из перечисленного является субъектом гражданского права?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(91, 'Географическое положение', FALSE),
-(91, 'Физическое лицо', TRUE),
 (91, 'Климатическая зона', FALSE),
+(91, 'Физическое лицо', TRUE),
+(91, 'Географическое положение', FALSE),
 (91, 'Биологический вид', FALSE);
 
 -- Вопрос 92
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (92, 'Что регулирует семейное право?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
+(92, 'Валютные операции', FALSE),
 (92, 'Налогообложение', FALSE),
 (92, 'Отношения между супругами и детьми', TRUE),
-(92, 'Избирательный процесс', FALSE),
-(92, 'Валютные операции', FALSE);
+(92, 'Избирательный процесс', FALSE);
 
 -- Вопрос 93
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (93, 'Что входит в систему права РФ?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(93, 'Частные корпорации', FALSE),
-(93, 'Отрасли права', TRUE),
+(93, 'Природные ресурсы', FALSE),
 (93, 'Финансовые резервы', FALSE),
-(93, 'Природные ресурсы', FALSE);
+(93, 'Отрасли права', TRUE),
+(93, 'Частные корпорации', FALSE);
 
 -- Вопрос 94
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (94, 'Кто принимает федеральные законы в РФ?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(94, 'Совет Федерации', FALSE),
+(94, 'Прокуратура', FALSE),
 (94, 'Государственная Дума', TRUE),
 (94, 'Президент РФ', FALSE),
-(94, 'Прокуратура', FALSE);
+(94, 'Совет Федерации', FALSE);
 
 -- Вопрос 95
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (95, 'Что является примером моральной нормы?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(95, 'Заплатить налог', FALSE),
-(95, 'Помогать пожилым людям', TRUE),
+(95, 'Обратиться в суд', FALSE),
 (95, 'Получить водительские права', FALSE),
-(95, 'Обратиться в суд', FALSE);
+(95, 'Помогать пожилым людям', TRUE),
+(95, 'Заплатить налог', FALSE);
 
 -- Вопрос 96
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (96, 'Что характеризует демократическое государство?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(96, 'Военное управление', FALSE),
-(96, 'Разделение властей', TRUE),
+(96, 'Запрет оппозиции', FALSE),
 (96, 'Ограничение прав', FALSE),
-(96, 'Запрет оппозиции', FALSE);
+(96, 'Разделение властей', TRUE),
+(96, 'Военное управление', FALSE);
 
 -- Вопрос 97
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (97, 'Что относится к функциям семьи?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
 (97, 'Проведение выборов', FALSE),
+(97, 'Регулирование цен', FALSE),
 (97, 'Воспитание детей', TRUE),
-(97, 'Формирование бюджета страны', FALSE),
-(97, 'Регулирование цен', FALSE);
+(97, 'Формирование бюджета страны', FALSE);
 
 -- Вопрос 98
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (98, 'Кто обладает правом избирать в РФ с 18 лет?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(98, 'Иностранный студент', FALSE),
 (98, 'Гражданин РФ', TRUE),
-(98, 'Любой человек', FALSE),
-(98, 'Турист', FALSE);
+(98, 'Турист', FALSE),
+(98, 'Иностранный студент', FALSE),
+(98, 'Любой человек', FALSE);
 
 -- Вопрос 99
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (99, 'Что обеспечивает Конституция РФ?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(99, 'Финансирование предприятий', FALSE),
-(99, 'Права и свободы граждан', TRUE),
+(99, 'Изменение климата', FALSE),
 (99, 'Рынок недвижимости', FALSE),
-(99, 'Изменение климата', FALSE);
+(99, 'Права и свободы граждан', TRUE),
+(99, 'Финансирование предприятий', FALSE);
 
 -- Вопрос 100
 INSERT INTO "Question" (id, "questionText", "questionType", "createdAt", "updatedAt")
 VALUES (100, 'Какой орган власти РФ обеспечивает исполнение законов?', 'MULTIPLE_CHOICE', NOW(), NOW());
 INSERT INTO "Answer" ("questionId", text, "isCorrect") VALUES
-(100, 'Конституционный суд', FALSE),
 (100, 'Правительство РФ', TRUE),
-(100, 'Счетная палата', FALSE),
-(100, 'Федеральное собрание', FALSE);
+(100, 'Федеральное собрание', FALSE),
+(100, 'Конституционный суд', FALSE),
+(100, 'Счетная палата', FALSE);
+
