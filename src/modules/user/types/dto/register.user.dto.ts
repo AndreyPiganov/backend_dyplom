@@ -29,7 +29,7 @@ export default class RegisterUserDto {
     })
     @IsString({ message: 'validation.isString' })
     @IsNotEmpty({ message: 'validation.isNotEmpty' })
-    @MinLength(8, { message: i18nValidationMessage('validation.maxLength') })
+    @MinLength(8, { message: i18nValidationMessage('validation.minLength') })
     @MaxLength(20, { message: i18nValidationMessage('validation.maxLength') })
     @Validate(CustomPasswordValidator)
     password: string;
